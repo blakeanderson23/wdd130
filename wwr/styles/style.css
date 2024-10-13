@@ -1,0 +1,92 @@
+
+:root {
+    --primary-color: #606C38;
+    --secondary-color: #283618;
+    --accent1-color: #FEFAE0;
+    --accent2-color: #DDA15E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--accent1-color);
+}
+
+header {
+    background-color: rgba(20, 30, 13, 0.7);
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    color: var(--accent1-color);
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    text-decoration: none; /* No underline on hover */
+}
+
+.button-box, .msg, main section {
+    text-align: center;
+}
+
+.book, .join {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* No underline for buttons */
+}
+
+.book:hover, .join:hover {
+    background-color: var(--accent2-color);
+    color: white;
+}
+
+#background {
+    height: 725px;
+    background-color: var(--accent1-color);
+}
+
+.msg {
+    padding: 20px;
+    border: 1px solid var(--secondary-color);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.2em; /* Larger font size for footer text */
+}
+
+.logo, .icon {
+    width: 80px;
+}
+
+#hero-img {
+    width: 100%;
+}
+
+#hero-msg h1,
+#hero-msg h4 {
+    text-align: center;
+}
+
+footer a {
+    color: var(--accent1-color);
+    text-decoration: none;
+}
