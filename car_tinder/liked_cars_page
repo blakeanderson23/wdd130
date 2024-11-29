@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liked Cars</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .car-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .car-card {
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .car-card video {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .car-card .info {
+      padding: 15px;
+    }
+
+    .car-card .info h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .car-card .info p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .no-cars {
+      text-align: center;
+      color: #777;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Liked Cars</h1>
+    <p>View the cars you've liked.</p>
+  </header>
+
+  <div class="container">
+    <div id="liked-cars" class="car-list">
+      <!-- Placeholder content -->
+      <p class="no-cars">You haven't liked any cars yet!</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 CarSwipe. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Placeholder for dynamic data from backend
+    const likedCars = [
+      {
+        id: 1,
+        video: "tesla-model-y.mp4",
+        title: "2022 Tesla Model Y",
+        price: "$55,000",
+        mileage: "10,000 miles",
+        location: "Los Angeles, CA",
+      },
+      {
+        id: 2,
+        video: "ford-mustang.mp4",
+        title: "2018 Ford Mustang",
+        price: "$30,000",
+        mileage: "25,000 miles",
+        location: "Houston, TX",
+      }
+    ];
+
+    const likedCarsContainer = document.getElementById('liked-cars');
+
+    // Populate the liked cars list
+    function displayLikedCars() {
+      likedCarsContainer.innerHTML = ""; // Clear placeholder
+      if (likedCars.length === 0) {
+        likedCarsContainer.innerHTML = `<p class="no-cars">You haven't liked any cars yet!</p>`;
+        return;
+      }
+
+      likedCars.forEach(car => {
+        const carCard = `
+          <div class="car-card">
+            <video src="${car.video}" controls></video>
+            <div class="info">
+              <h2>${car.title}</h2>
+              <p>Price: ${car.price}</p>
+              <p>Mileage: ${car.mileage}</p>
+              <p>Location: ${car.location}</p>
+            </div>
+          </div>
+        `;
+        likedCarsContainer.innerHTML += carCard;
+      });
+    }
+
+    // Call function to render liked cars
+    displayLikedCars();
+  </script>
+</body>
+</html>
