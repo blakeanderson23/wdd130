@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="styles/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hallmark Reviews</title>
@@ -9,29 +10,32 @@
 
 <body>
     <header>
-        <a href="index.html">
-            <img src="images/hallmark_logo.png" alt="Hallmark Logo">
-        </a>
+        <div class="logo_container">
+            <a class="logo" href="index.html">
+                <img width=100% src="images/hallmark_logo.png" alt="Hallmark Logo">
+            </a>
+            <h1 class="header_title"> Hallmark Reviews</h1>
+        </div>
         <nav>
             <a href="index.html">Home</a>
             <a href="movies.html">Movies</a>
             <a href="friends.html">Friends</a>
         </nav>
     </header>
-    <div>
-        <h1>Friends:</h1>
-        <h3>Addi Anderson: 95 Reviews<br>
-        Liv Lighthall: 132 Reviews
+    <div class="friends_main">
+        <h1 class="left_align top_align">
+            Friends:</h1>
+        <h3 class="left_align bottom_align padding_left">
+            Addi Anderson: 95 Reviews<br>
+            Liv Lighthall: 132 Reviews
         </h3>
-    </div>
-    <div>
-        <h1>Suggested Friends:</h1>
-        <h3>Holly Anderson: 23 Reviews<br>
-        Bo Bishop: 548 Reviews
+        <h1 class="rightest_align">
+            Suggested Friends:</h1>
+        <h3 class="rightest_align">
+            Holly Anderson: 23 Reviews<br>
+            Bo Bishop: 548 Reviews
         </h3>
-    </div>
-    <div>
-        <img src="images/four_friends.jpeg" alt="Friends Picture">
+        <img class="friends_image" src="images/four_friends.jpeg" alt="Friends Picture">
     </div>
     <footer>
         <p>Hallmark Reviews &copy; 2024 - Blake Anderson</p>
